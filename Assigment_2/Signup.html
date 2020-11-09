@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> ShowTrackr </title>
+    <link rel="stylesheet" href="showtrackr.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <header>
+    <ul>
+      <li><a class="homecolor" href="Home_Page.html">ShowTrackr</a></li>
+      <li><a href="Home_Page.html">Home</a></li>
+      <li><a href="Add.html">Add</a></li>
+      <li style="float:right"><a href="Signup.html">Signup</a></li>
+      <li style="float:right"><a href="Login.html">Login</a></li>
+    </ul>
+    </header>
+  </head>
+  <body>
+    <div class="login">
+      <br>
+      <h3>Sign Up </h3>
+      <label><i class="material-icons">person<input type="text" id="username" name="username" placeholder="User Name" required
+        onclick="document.getElementById('useerr').innerHTML = 'Your User Name is Required';this.onclick=null;"
+        oninput="ValidateUser(username.value)"></i><label><br>
+        <span style="color:red; margin-top:0px;font-size: 15px;margin-left:70px;float:left;" id="useerr"></span>
+      <label><i class="material-icons">mail<input type="text" id="email" name="email" placeholder="E-mail" required
+        onclick="document.getElementById('mailerr').innerHTML = 'Your e-mail address is Required.' ;this.onclick=null;"
+        oninput="ValidateEmail(email)"></i><label>
+        <span style="color:red; margin-top:0px;font-size: 15px;margin-left:70px;float:left;" id="mailerr"></span>
+      <label><i class="material-icons">lock<input type="password" id="password" name="password" placeholder="Password" required
+        onclick="document.getElementById('passerr').innerHTML = 'Your Password is Required';this.onclick=null;"
+        oninput="Validatepw(password.value)"></i><br></label>
+        <span style="color:red; margin-top:0px;font-size: 15px;margin-left:70px;float:left;" id="passerr"></span>
+      <button onclick="store(username.value,email.value,password.value)" class="signup">Sign up</button>
+      <p>By clicking on signup you agree to Terms and condtiton and private policy</p>
+      <p> Already have a account...  <a href="login.html">login now </a> </p>
+      <br>
+    </div>
+    <script>
+    function ValidateEmail(inputText)
+      {
+        var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(inputText.value.match(mailformat))
+        {
+          document.getElementById('mailerr').innerHTML =" ";
+        }
+        else
+        {
+          document.getElementById('mailerr').innerHTML ="Your email address Invalid";
+        }
+      }
+      function ValidateUser(Tex){
+        var usenum= Tex.length;
+        if(usenum<5){
+          document.getElementById('useerr').innerHTML ="Your User Name Invalid";
+        }
+        else if(usenum){
+          document.getElementById('useerr').innerHTML =" ";
+        }
+      }
+      function Validatepw(Texp){
+        if (Texp.match(/[a-z]/g) && Texp.match(
+                    /[A-Z]/g) && Texp.match(
+                    /[0-9]/g) && Texp.match(
+                    /[^a-zA-Z\d]/g) && Texp.length >= 8) {
+                document.getElementById('passerr').innerHTML =" ";
+              }
+        else {
+          document.getElementById('passerr').innerHTML ="Your Password is Invalid ";
+        }
+      }
+      function store(useername,email,password){
+        var i=5;
+        user[i].user=useername;
+        user[i].mail=email;
+        user[i].pw=password;
+        alert("User created");
+        i++;
+      }
+    </script>

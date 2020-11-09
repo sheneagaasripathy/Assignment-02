@@ -1,0 +1,152 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.homecolor {
+  background-color:#fef23c;
+}
+body {
+  background-color:#bec1c6;
+}
+div.s1{
+  background-color:#e4e8e9;
+  text-align: center;
+}
+div.s2{
+  background-color:#e4e8e9;
+  text-align: center;
+  max-width:80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+div.s3{
+  background-color:#f1f1f1;
+  text-align: center;
+  max-width:80%;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+div.login{
+  background-color:#f1f1f1;
+  text-align: center;
+  max-width:80%;
+  margin-top: 7%;
+  margin-left: 35%;
+  margin-right: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+div.s4{
+  background-color:#e4e8e9;
+  text-align: center;
+  max-width:80%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color:#717478;
+}
+button{
+  background-color:#bcc8da;
+  color: black;
+  opacity: 0.5;
+  border: 0;
+  margin-left: 2px;
+}
+button.b1{
+  background-color: #7e94eb;
+  color: white;
+  opacity: 100%;
+  border: 1px;
+  padding: 10px 25px;
+  margin-left: 20px;
+}
+button.login{
+  background-color: lightgreen;
+  color: white;
+  opacity: 100%;
+  border: 1px;
+  width: 90%;
+  height: 30px;
+}
+button.signup{
+  background-color:#7e94eb;
+  color: white;
+  opacity: 100%;
+  border: 1px;
+  width: 90%;
+  height: 30px;
+}
+.gab{
+  margin-top:5px;
+}
+img{
+  width: 200px;
+  height: 350px;
+  margin: 10px;
+  border-radius: 10px;
+}
+img.logo{
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+}
+.column {
+  float: left;
+  width: 20%;
+  padding: 20px;
+}
+.columns {
+  float: left;
+  width: 70%;
+  padding: 20px;
+  text-align: left;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input[type=text.home]{
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=text]{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=password]{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}

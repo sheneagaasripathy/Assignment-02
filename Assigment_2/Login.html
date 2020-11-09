@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> ShowTrackr </title>
+    <link rel="stylesheet" href="showtrackr.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <header>
+    <ul>
+      <li><a class="homecolor" href="Home_Page.html">ShowTrackr</a></li>
+      <li><a href="Home_Page.html">Home</a></li>
+      <li><a href="Add.html">Add</a></li>
+      <li style="float:right"><a href="Signup.html">Signup</a></li>
+      <li style="float:right"><a href="Login.html">Login</a></li>
+    </ul>
+    </header>
+  </head>
+  <body>
+    <div class="login">
+      <br>
+      <h3>Log in </h3>
+      <label><i class="material-icons">mail<input type="text" id="email" name="email" placeholder="E-mail" value = "E-mail"></i><label>
+      <label><i class="material-icons">lock<input type="password" id="password" name="password" placeholder="Password" value = "Password"></i><br></label>
+      <button class="login" onclick="validate(email.value,password.value)">Login </button>
+      <br><br>
+      <a href="Forgotpage.html"> Forgot Your Password? </a>
+      <p> Don't have an account yet?  <span onclick="window.location.replace('Signup.html');" class="signup">signup</span>
+      <Strong><p text-align="center">OR</p></strong>
+      <a href="www.googleplus/login.com"><img class="logo" src="https://arts.co.at/Content/Images/googleconnect.png" ></a>
+      <a href="www.facebook/login.com"><img class="logo" src="https://arabianranches.sakani.ae/Images/fblogin.png" ></a>
+    </div>
+    <script>
+      var user=[{user:"user1",pw:123,mail:"raji@gmail"},{user:"user2",pw:123,mail:"raji@gmail"},{user:"user3",pw:123,mail:"raji@gmail"},{user:"user4",pw:123,mail:"raji@gmail"},{user:"user5",pw:123,mail:"raji@gmail"}];
+      function validate(use,password){
+        let successful = false;
+        for(var i = 0; i<user.length; i++){
+          if(user[i].user==use){
+            if(user[i].pw == password ){
+              successful = true;
+              break;
+            }
+          }
+        }
+        if(successful == true){
+          alert("Login Successful");
+        }
+        else{
+          alert("Login Unsuccessful");
+        }
+      }
+    </script>
